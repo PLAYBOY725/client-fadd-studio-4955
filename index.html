@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FADD Studio | Luxury Architecture & Interior Design in Indiranagar, Bangalore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        .gradient-luxury { background: linear-gradient(135deg, #1a1a1a 0%, #333 100%); }
+    </style>
+</head>
+<body class="text-gray-900 antialiased bg-gray-50">
+
+    <!-- Top Bar -->
+    <div class="bg-black text-white text-xs py-2 px-4 flex justify-between items-center">
+        <span class="hidden md:block">Indiranagar, Bangalore's Premier Design Firm</span>
+        <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1 text-yellow-400 font-bold">★ 4.9 Google Rated (120+ Reviews)</span>
+            <a href="tel:+919900291900" class="hover:text-yellow-400">+91 99002 91900</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">FADD<span class="text-yellow-600">STUDIO</span></div>
+            <div class="hidden md:flex gap-8 font-medium text-sm">
+                <a href="#services" class="hover:text-yellow-600 transition">Services</a>
+                <a href="#process" class="hover:text-yellow-600 transition">Approach</a>
+                <a href="#contact" class="hover:text-yellow-600 transition">Contact</a>
+            </div>
+            <a href="#booking" class="bg-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-yellow-600 transition">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative pt-20 pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-yellow-50 text-yellow-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-yellow-100">
+                    <span>Verified Luxury Excellence</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">Redefining Space Through <span class="text-yellow-600">Pure Luxury</span></h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg">FADD Studio delivers bespoke architectural and interior design solutions in Indiranagar. Where visionary design meets meticulous execution.</p>
+                <div class="flex gap-4">
+                    <a href="#booking" class="bg-yellow-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-black transition">Start Your Project</a>
+                    <a href="https://wa.me/919900291900?text=Hello%20FADD%20Studio,%20I%20want%20to%20inquire%20about%20your%20services." class="border border-gray-300 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="gradient-luxury p-1 rounded-3xl h-96 flex flex-col justify-end p-8 text-white shadow-2xl">
+                <h3 class="text-2xl font-bold mb-2">Exclusive Signature Design</h3>
+                <p class="text-gray-300">Your vision, our expertise. Elevating life through detail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Curated Design Offerings</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                    {t: "Signature Consultation", d: "Strategic blueprinting for your luxury space."},
+                    {t: "Turnaround Package", d: "Full design implementation from A to Z."},
+                    {t: "Enterprise Care", d: "End-to-end management for premium projects."},
+                    {t: "VIP Support", d: "24/7 dedicated design management team."}
+                ].map(s => (
+                    <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition group">
+                        <div class="w-12 h-12 bg-yellow-50 text-yellow-600 rounded-lg mb-6 flex items-center justify-center font-bold text-lg">★</div>
+                        <h3 class="font-bold text-xl mb-3">{s.t}</h3>
+                        <p class="text-gray-600 text-sm">{s.d}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-24 bg-gray-900 text-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-4 text-center">Schedule a Private Consultation</h2>
+            <p class="text-gray-400 text-center mb-12">Submit your details and our team will reach out within 2 hours.</p>
+            <div id="successBanner" class="hidden bg-green-600 p-4 rounded-lg mb-6 text-center font-semibold">Message Received! We'll be in touch shortly.</div>
+            <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Full Name" required class="bg-gray-800 border-none p-4 rounded-lg focus:ring-2 focus:ring-yellow-600">
+                <input type="tel" placeholder="Phone Number" required class="bg-gray-800 border-none p-4 rounded-lg focus:ring-2 focus:ring-yellow-600">
+                <input type="email" placeholder="Email Address" required class="col-span-full bg-gray-800 border-none p-4 rounded-lg focus:ring-2 focus:ring-yellow-600">
+                <textarea placeholder="Tell us about your project" required class="col-span-full bg-gray-800 border-none p-4 rounded-lg h-32 focus:ring-2 focus:ring-yellow-600"></textarea>
+                <button type="submit" class="col-span-full bg-yellow-600 py-4 rounded-lg font-bold hover:bg-white hover:text-black transition">Request Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Common Inquiries</h2>
+            <div class="space-y-4">
+                <div class="border-b pb-4">
+                    <button class="w-full text-left font-bold flex justify-between accordion-trigger">What is your design philosophy? <span>+</span></button>
+                    <p class="hidden pt-4 text-gray-600">We blend functional elegance with timeless architectural principles tailored to Bangalore's unique climate and urban lifestyle.</p>
+                </div>
+                <div class="border-b pb-4">
+                    <button class="w-full text-left font-bold flex justify-between accordion-trigger">Do you offer virtual consultations? <span>+</span></button>
+                    <p class="hidden pt-4 text-gray-600">Yes, we provide high-definition virtual design sessions for remote clients or initial screenings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-12 px-6 text-center">
+        <div class="text-2xl font-bold mb-4">FADD STUDIO</div>
+        <p class="text-gray-500 mb-6 text-sm">Indiranagar, Bangalore, India</p>
+        <p class="text-xs text-gray-400">&copy; 2024 FADD Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Form Logic
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('successBanner').classList.remove('hidden');
+        });
+
+        // FAQ Logic
+        document.querySelectorAll('.accordion-trigger').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
